@@ -5,7 +5,3 @@ Player will make a character by pressing play. The player will put points into t
 Player will be able to move around a maze. Every time they move one step, a encounter dice is “rolled” to see what happens. They will either fight an enemy, fight loot, or nothing will happen.
 
 If combat or loot is rolled true, another dice will roll to see what loot the player will get, or what enemy the player has to fight.
-
-Player will walk around the map looking for a key to open the door to the boss.
-
-
