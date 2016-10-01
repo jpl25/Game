@@ -1,0 +1,11 @@
+﻿The player will start the game and a Main menu with buttons will appear. There is buttons that are part of the menu. 
+
+Player will make a character by pressing play. The player will put points into their stats(strength, dexterity, etc.) Player will choose the race they want to be (Human, Elf, etc.) then what class(PayerType)(warrior, rogue, etc.). The race will give a plus to certain stats and the class will determine what stats are necessary for the player to use to attack.
+
+Player will be able to move around a maze. Every time they move one step, a encounter dice is “rolled” to see what happens. They will either fight an enemy, fight loot, or nothing will happen.
+
+If combat or loot is rolled true, another dice will roll to see what loot the player will get, or what enemy the player has to fight.
+
+Player will walk around the map looking for a key to open the door to the boss.
+
+
