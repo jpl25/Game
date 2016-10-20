@@ -1,0 +1,1 @@
+I have tried to make a makefile for those files so it can run on the commandline. I have failed every attempt. Any help would greatly be appreciated.
