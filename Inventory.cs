@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+namespace GAME{
 public class Inventory : MonoBehaviour {
 	Dictionary<int, Weapons> newWeapon = new Dictionary<int, Weapons> ();
 	Dictionary<int, Armor> newArmor = new Dictionary<int, Armor> ();
 	Dictionary<int, Item> newItem = new Dictionary<int, Item> ();
 	Dictionary<int, Spells> newSpell = new Dictionary<int, Spells> ();
 	static int armorCnt, wepCnt, itemCnt, spellCnt = 0;
+
 
 	public Inventory(Weapons wep, Armor armor){
 		this.setWeapon (wep);
@@ -59,4 +60,5 @@ public class Inventory : MonoBehaviour {
 		}
 	}
 
+}
 }

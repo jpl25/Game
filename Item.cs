@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+namespace GAME{
 public class Item : MonoBehaviour{
 private string itemName;
 private int type;
@@ -28,8 +29,8 @@ public int getWeight(){
 }
 
 public string getName(){
-	return name;
+	return itemName;
 }
 
 }
-
+}

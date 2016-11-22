@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+namespace GAME{
 public class Armor : MonoBehaviour {
 	private string armorName;
-	private int damage;
+	private double damage;
 	private int type;
 
 	public Armor(){
@@ -12,14 +13,14 @@ public class Armor : MonoBehaviour {
 		this.type = 0;
 	}
 
-	public Armor(string name, int damage, int type){
+	public Armor(string name, double damage, int type){
 		this.setName (name);
 		this.setDamage(damage);
 		this.setType(type);
 
 	}
 
-	public void setDamage(int updateDamage){
+	public void setDamage(double updateDamage){
 		this.damage = updateDamage;	
 	}
 
@@ -32,7 +33,7 @@ public class Armor : MonoBehaviour {
 		this.armorName = addName;
 	}
 
-	public int getDamage(){
+	public double getDamage(){
 		return damage;	
 	}
 
@@ -43,4 +44,5 @@ public class Armor : MonoBehaviour {
 	public string getName(){
 		return armorName;
 	}
+}
 }

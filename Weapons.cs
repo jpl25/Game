@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+namespace GAME{
+
 public class Weapons : MonoBehaviour {
 	private string weaponName;
-	private int damage;
+	private double damage;
 	private int enchantment;
 	private int type;
 
@@ -14,14 +16,14 @@ public class Weapons : MonoBehaviour {
 		this.type = 0;
 	}
 
-	public Weapons(string name, int damage, int enchantment, int type){
+	public Weapons(string name, double damage, int enchantment, int type){
 		this.setName (name);
 		this.setDamage(damage);
 		this.setEnchantment(enchantment);
 		this.setType(type);
 	}
 
-	public void setDamage(int updateDamage){
+	public void setDamage(double updateDamage){
 		this.damage = updateDamage;	
 	}
 
@@ -37,7 +39,7 @@ public class Weapons : MonoBehaviour {
 		this.name = addName;
 	}
 
-	public int getDamage(){
+	public double getDamage(){
 		return damage;	
 	}
 
@@ -45,7 +47,7 @@ public class Weapons : MonoBehaviour {
 		return enchantment;
 	}
 
-	public int getWeight(){
+	public int getType(){
 		return type;	
 	}
 
@@ -53,4 +55,5 @@ public class Weapons : MonoBehaviour {
 		return name;
 	}
 
+	}
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+namespace GAME{
 public class Spells : MonoBehaviour{
 	
 	private string spellName;
@@ -29,7 +30,7 @@ public class Spells : MonoBehaviour{
 	}
 
 	public void setName(string addName){
-		this.name = addName;
+		this.spellName = addName;
 	}
 
 	public int getDamage(){
@@ -46,4 +47,4 @@ public class Spells : MonoBehaviour{
 
 
 }
-
+}
