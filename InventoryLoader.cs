@@ -4,19 +4,19 @@ using System.Collections;
 
 namespace DungeonExplorer{
 	public class InventoryLoader{
-		private int characterClass;
+		private static int characterClass;
 		private Weapons wep;
 		private Armor armor;
 		private Spells spell;
 		private Item item;
-		private static Inventory inventory;
+		private static Inventory inventory = new Inventory();
 
 		public Inventory getInventory(){
 			return inventory;
 		}
 
 		public void setCharacterClass(int cClass){
-			this.characterClass = cClass;
+			characterClass = cClass;
 			preloadInventory (cClass);
 		}
 
@@ -25,18 +25,19 @@ namespace DungeonExplorer{
 			if (cClass == 1) {
 				wep = new Weapons ("Rusty Sword", 4, 0, 1);
 				armor = new Armor ("Rusty lite armor", 2, 2);
-				inventory = new Inventory (wep, armor); 
-				wep = new Weapons ("TEST WEAPON", 4, 0, 1);
-				inventory.setWeapon(wep);
+				addWeapon (wep);
+				addArmor (armor);
 
 			} else if (cClass == 2) {
-				this.wep = new Weapons ("Broken Mage Staff", 3, 3, 1);
-				this.armor = new Armor ("Tattered robe", 0, 2);
-				inventory = new Inventory (wep, armor); 
+				wep = new Weapons ("Broken Mage Staff", 3, 3, 1);
+				armor = new Armor ("Tattered robe", 0, 2);
+				addWeapon (wep);
+				addArmor (armor);
 			} else if (cClass == 3) {
-				this.wep = new Weapons ("Crappy Dager", 1, 0, 1);
-				this.armor = new Armor ("Riped Shirt", 3, 0);
-				inventory = new Inventory (wep, armor); 
+				wep = new Weapons ("Crappy Dager", 1, 0, 1);
+				armor = new Armor ("Riped Shirt", 3, 5);
+				addWeapon (wep);
+				addArmor (armor);
 			}
 		}
 

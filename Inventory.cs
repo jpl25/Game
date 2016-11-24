@@ -41,30 +41,42 @@ namespace DungeonExplorer{
 		}
 
 		public Armor getArmor(int armor){
-			return newArmor[armor];
+			if (!newArmor.ContainsKey (armor)) {
+				Debug.Log ("You do not have armor in that slot.");
+			} else {return newArmor [armor];}
+			return null;
 		}
 
 		public Weapons getWeapon(int weapon){
-			return newWeapon[weapon];
+			if (!newWeapon.ContainsKey (weapon)) {
+				Debug.Log ("You do not have a weapon in that slot.");
+			} else {return newWeapon [weapon];}
+			return null;
 		}
 
 		public Item getItem(int item){
-			return newItem[item];
+			if (!newItem.ContainsKey (item)) {
+				Debug.Log ("You do not have an item in that slot.");
+			} else {return newItem [item];}
+			return null;
 		}
 
 		public Spells getSpells(int spell){
-			return newSpell[spell];
+			if (!newSpell.ContainsKey (spell)) {
+				Debug.Log ("You do not have a spell in that slot.");
+			} else {return newSpell [spell];}
+			return null;
 		}
 
 		public void displayInventory(){
 			foreach (KeyValuePair<int, Weapons> kv in newWeapon) {
 				Debug.Log("WEAPONS");
-				Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString () ); 
+				Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString () + " " +kv.Value.getDamage()); 
 			}
 
 			foreach (KeyValuePair<int, Armor> kv in newArmor) {
 				Debug.Log("ARMOR");
-				Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString () ); 
+				Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString () + " " + kv.Value.getDamage()); 
 			}
 
 			if (newItem != null) {
@@ -76,7 +88,7 @@ namespace DungeonExplorer{
 			if (newSpell != null) {
 				Debug.Log("SPELLS");
 				foreach (KeyValuePair<int, Spells> kv in newSpell) {
-					Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString () ); 
+					Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString ()  ); 
 				}
 			}
 		}
