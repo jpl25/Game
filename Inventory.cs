@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 
 namespace DungeonExplorer{
 	
-	public class Inventory : MonoBehaviour {
+	public class Inventory{
 		Dictionary<int, Weapons> newWeapon = new Dictionary<int, Weapons> ();
 		Dictionary<int, Armor> newArmor = new Dictionary<int, Armor> ();
 		Dictionary<int, Item> newItem = new Dictionary<int, Item> ();
 		Dictionary<int, Spells> newSpell = new Dictionary<int, Spells> ();
-		static int armorCnt, wepCnt, itemCnt, spellCnt = 0;
+		static int armorCnt = 1, wepCnt = 1, itemCnt = 1, spellCnt =1;
+
+		public Inventory(){
+		}
 
 		public Inventory(Weapons wep, Armor armor){
 			this.setWeapon (wep);
@@ -53,11 +57,27 @@ namespace DungeonExplorer{
 		}
 
 		public void displayInventory(){
-			for (int i = 0; i <= 50; i++) {
-				Debug.Log (newWeapon [i]);
-				Debug.Log (newItem [i]);
-				Debug.Log (newArmor [i]);
-				Debug.Log (newSpell [i]);
+			foreach (KeyValuePair<int, Weapons> kv in newWeapon) {
+				Debug.Log("WEAPONS");
+				Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString () ); 
+			}
+
+			foreach (KeyValuePair<int, Armor> kv in newArmor) {
+				Debug.Log("ARMOR");
+				Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString () ); 
+			}
+
+			if (newItem != null) {
+				Debug.Log("ITEMS");
+				foreach (KeyValuePair<int, Item> kv in newItem) {
+					Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString () ); 
+				}
+			}
+			if (newSpell != null) {
+				Debug.Log("SPELLS");
+				foreach (KeyValuePair<int, Spells> kv in newSpell) {
+					Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString () ); 
+				}
 			}
 		}
 

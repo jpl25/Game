@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace DungeonExplorer{
+namespace DungeonExplorer {
 
-	public class Weapons : MonoBehaviour {
+	public class Weapons{
 		private string weaponName;
 		private double damage;
 		private int enchantment;
 		private int type;
 
 		public Weapons(){
-			this.name = null;
+			this.weaponName = null;
 			this.damage = 0;
 			this.enchantment = 0;
 			this.type = 0;
@@ -36,7 +36,7 @@ namespace DungeonExplorer{
 		}
 
 		public void setName(string addName){
-			this.name = addName;
+			this.weaponName = addName;
 		}
 
 		public double getDamage(){
@@ -52,11 +52,11 @@ namespace DungeonExplorer{
 		}
 
 		public string getName(){
-			return name;
+			return weaponName;
 		}
 		
-		public void toString(){
-			Debug.Log (name);
+		public override string ToString(){
+			return weaponName;
 		}
 
 	}

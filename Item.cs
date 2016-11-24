@@ -3,12 +3,12 @@ using System.Collections;
 
 namespace DungeonExplorer{
 	
-	public class Item : MonoBehaviour{
+	public class Item{
 		private string itemName;
 		private int type;
 
 		public Item(){
-			this.name = null;
+			this.itemName = null;
 			this.type = 0;
 		}
 
@@ -32,8 +32,9 @@ namespace DungeonExplorer{
 		public string getName(){
 			return itemName;
 		}
-		public void toString(){
-			Debug.Log (name);
+
+		public override string ToString(){
+			return itemName;
 		}
 	}
 }

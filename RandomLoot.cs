@@ -1,25 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor;
+
 
 namespace DungeonExplorer{
-	public class RandomLoot: MonoBehaviour {
+	public class RandomLoot{
 
 		private int temp, num;
 		private InventoryLoader loadInventory = new InventoryLoader ();
+		private string  ItemSelectionOne, ItemSelectionTwo, ItemSelectionThree,
+						ItemSelectionFour,ItemSelectionFive,ItemSelectionSix,
+						ItemSelectionSeven,ItemSelectionEight,ItemSelectionNine, 
+						ItemSelectionTen;
 	
 		public void randomItemSelection(){
-		num = Random.Range (0, 10);
-		temp = 0;
+		num = Random.Range (1, 10);
+		temp = 1;
 			if (num == 1) {
-				//THIS IS WHERE THE TEXT WILL GO
-				//"Healing Spell", 85, 5
-				//Sword", 15, 0, 1
-				//Sword", 15, 0, 1
-				//"Damaged Heavy Armor", 15, 1
-				//"Master Key", 1
-
-				switch (temp) {
+				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
+										  " Broken Dagger, 1, 0, 2 \n" +
+										  " Shock Spell, 15, 0, 1 \n" +
+										  " Lightning Spell, 15, 0, 1 \n" +
+										  " Sword, 5, 0, 1 \n";
+			switch (temp) {
 				case 1:
 					loadInventory.addWeapon(new Weapons("Sword", 15, 0, 1));
 					break;
@@ -33,16 +35,16 @@ namespace DungeonExplorer{
 					loadInventory.addSpell(new Spells("Lightning Spell", 25, 1));
 					break;
 				case 5:
-					loadInventory.addWeapon(new Weapons("Sword", 15, 0, 1));
+					loadInventory.addWeapon(new Weapons("Sword", 5, 0, 1));
 					break;
 				}
 			} else if (num == 2) {
-				//THIS IS WHERE THE TEXT WILL GO
-				//"Healing Spell", 85, 5
-				//Sword", 15, 0, 1
-				//Sword", 15, 0, 1
-				//"Damaged Heavy Armor", 15, 1
-				//"Master Key", 1
+				string ItemSelectionOne = " Old Knive, 15, 0, 1 \n" +
+										  " Shock Spell, 15, 0, 1 \n" +
+										  " Sword, 15, 0, 1 \n" +
+										  " Sword, 15, 0, 1 \n" +
+										  " Sword, 15, 0, 1 \n";
+				
 				switch (temp) {
 				case 1:
 					loadInventory.addWeapon(new Weapons("Old Knive", 5, 0, 2));
@@ -61,12 +63,11 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 3) {
-				//THIS IS WHERE THE TEXT WILL GO
-				//"Healing Spell", 85, 5
-				//Sword", 15, 0, 1
-				//Sword", 15, 0, 1
-				//"Damaged Heavy Armor", 15, 1
-				//"Master Key", 1
+				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n";
 				switch (temp) {
 				case 1:
 					loadInventory.addArmor(new Armor("Damaged Heavy Armor", 15, 1));
@@ -85,12 +86,11 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 4) {
-				//THIS IS WHERE THE TEXT WILL GO
-				//"Healing Spell", 85, 5
-				//Sword", 15, 0, 1
-				//Sword", 15, 0, 1
-				//"Damaged Heavy Armor", 15, 1
-				//"Master Key", 1
+				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n";
 				switch (temp) {
 				case 1:
 					loadInventory.addSpell(new Spells("Healing Spell", 85, 5));
@@ -109,12 +109,11 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 5) {
-				//THIS IS WHERE THE TEXT WILL GO
-				//"Healing Spell", 85, 5
-				//Sword", 15, 0, 1
-				//Sword", 15, 0, 1
-				//"Damaged Heavy Armor", 15, 1
-				//"Master Key", 1
+				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n";
 				switch (temp) {
 				case 1:
 					loadInventory.addSpell(new Spells("Healing Spell", 85, 5));
@@ -133,12 +132,11 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 6) {
-				//THIS IS WHERE THE TEXT WILL GO
-				//"Healing Spell", 85, 5
-				//Sword", 15, 0, 1
-				//Sword", 15, 0, 1
-				//"Damaged Heavy Armor", 15, 1
-				//"Master Key", 1
+				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n";
 				switch (temp) {
 				case 1:
 					loadInventory.addSpell(new Spells("Healing Spell", 85, 5));
@@ -157,12 +155,11 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 7) {
-				//THIS IS WHERE THE TEXT WILL GO
-				//"Healing Spell", 85, 5
-				//Sword", 15, 0, 1
-				//Sword", 15, 0, 1
-				//"Damaged Heavy Armor", 15, 1
-				//"Master Key", 1
+				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n";
 				switch (temp) {
 				case 1:
 					loadInventory.addSpell(new Spells("Healing Spell", 85, 5));
@@ -181,12 +178,11 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 8) {
-				//THIS IS WHERE THE TEXT WILL GO
-				//"Healing Spell", 85, 5
-				//Sword", 15, 0, 1
-				//Sword", 15, 0, 1
-				//"Damaged Heavy Armor", 15, 1
-				//"Master Key", 1
+				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n";
 				switch (temp) {
 				case 1:
 					loadInventory.addSpell(new Spells("Healing Spell", 85, 5));
@@ -205,12 +201,11 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 9) {
-				//THIS IS WHERE THE TEXT WILL GO
-				//"Healing Spell", 85, 5
-				//Sword", 15, 0, 1
-				//Sword", 15, 0, 1
-				//"Damaged Heavy Armor", 15, 1
-				//"Master Key", 1
+				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n";
 				switch (temp) {
 				case 1:
 					loadInventory.addSpell(new Spells("Healing Spell", 85, 5));
@@ -229,12 +224,11 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 10) {
-				//THIS IS WHERE THE TEXT WILL GO
-				//"Healing Spell", 85, 5
-				//Sword", 15, 0, 1
-				//Sword", 15, 0, 1
-				//"Damaged Heavy Armor", 15, 1
-				//"Master Key", 1
+				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n" +
+					" Sword, 15, 0, 1 \n";
 				switch (temp) {
 				case 1:
 					loadInventory.addSpell(new Spells("Healing Spell", 85, 5));

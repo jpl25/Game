@@ -3,13 +3,13 @@ using System.Collections;
 
 namespace DungeonExplorer{
 	
-	public class Armor : MonoBehaviour {
+	public class Armor{
 		private string armorName;
 		private double damage;
 		private int type;
 
 		public Armor(){
-			this.name = null;
+			this.armorName = null;
 			this.damage = 0;
 			this.type = 0;
 		}
@@ -45,8 +45,8 @@ namespace DungeonExplorer{
 		public string getName(){
 			return armorName;
 		}
-		public void toString(){
-			Debug.Log (name);
+		public override string ToString(){
+			return armorName;
 		}
 	}
 }

@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor;
+
 
 namespace DungeonExplorer{
-	public class InventoryLoader : MonoBehaviour {
+	public class InventoryLoader{
 		private int characterClass;
 		private Weapons wep;
 		private Armor armor;
 		private Spells spell;
 		private Item item;
-		private Inventory inventory;
+		private static Inventory inventory;
 
 		public Inventory getInventory(){
 			return inventory;
@@ -23,17 +23,20 @@ namespace DungeonExplorer{
 		//This is the method that loads the invenory when the game is started.
 		public void preloadInventory(int cClass){
 			if (cClass == 1) {
-				this.wep = new Weapons ("Rusty Sword", 4, 0, 1);
-				this.armor = new Armor ("Rusty lite armor", 2, 2);
-				this.inventory = new Inventory (wep, armor); 
+				wep = new Weapons ("Rusty Sword", 4, 0, 1);
+				armor = new Armor ("Rusty lite armor", 2, 2);
+				inventory = new Inventory (wep, armor); 
+				wep = new Weapons ("TEST WEAPON", 4, 0, 1);
+				inventory.setWeapon(wep);
+
 			} else if (cClass == 2) {
 				this.wep = new Weapons ("Broken Mage Staff", 3, 3, 1);
 				this.armor = new Armor ("Tattered robe", 0, 2);
-				this.inventory = new Inventory (wep, armor); 
+				inventory = new Inventory (wep, armor); 
 			} else if (cClass == 3) {
 				this.wep = new Weapons ("Crappy Dager", 1, 0, 1);
 				this.armor = new Armor ("Riped Shirt", 3, 0);
-				this.inventory = new Inventory (wep, armor); 
+				inventory = new Inventory (wep, armor); 
 			}
 		}
 

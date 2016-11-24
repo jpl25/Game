@@ -3,13 +3,13 @@ using System.Collections;
 
 namespace DungeonExplorer{
 	
-	public class Spells : MonoBehaviour{
+	public class Spells{
 		private string spellName;
 		private int damage;
 		private int type;
 
 		public Spells(){
-			this.name = null;
+			this.spellName = null;
 			this.damage = 0;
 			this.type = 0;
 		}
@@ -44,8 +44,8 @@ namespace DungeonExplorer{
 		public string getName(){
 			return spellName;
 		}
-		public void toString(){
-			Debug.Log (name);
+		public override string ToString(){
+			return spellName;
 		}
 
 }
