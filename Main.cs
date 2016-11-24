@@ -23,7 +23,7 @@ public class Main : MonoBehaviour {
 		//ask for c class
 		// Auto load the inventory
 		loadInventory.setCharacterClass (1);
-		loot.randomItemSelection (Random.Range (1, 10));
+		//loot.randomItemSelection (Random.Range (1, 10));
 		
 		//Get Select Inventory.
 		//wep = getInventoryItem.selectWeaponItem (2);
@@ -40,11 +40,11 @@ public class Main : MonoBehaviour {
 			/*This is intended to create a random number each time the character moves. if the number
 			is 5 the random item selection will start prompting the user to select a item between 
 			a list of five items */
-			randomNumber = Random.Range (0, 50);
-			/*if (randomNumber == 25) {
+			randomNumber = Random.Range (0, 1000);
+			if (randomNumber == 500) {
 				loot.randomItemSelection (Random.Range (0, 10));
 				loadInventory.getInventory().displayInventory();
-			}*/
+			}
 
 		}
 

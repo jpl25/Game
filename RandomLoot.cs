@@ -40,7 +40,6 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 2) {
-				Debug.Log("TWO");
 				string ItemSelectionOne = " Old Knive, 15, 0, 1 \n" +
 										  " Shock Spell, 15, 0, 1 \n" +
 										  " Sword, 15, 0, 1 \n" +
@@ -65,7 +64,6 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 3) {
-				Debug.Log("THREE");
 				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
@@ -90,7 +88,6 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 4) {
-				Debug.Log("FOUR");
 				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
@@ -115,7 +112,6 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 5) {
-				Debug.Log("FIVE");
 				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
@@ -140,7 +136,6 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 6) {
-				Debug.Log("SIX");
 				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
@@ -165,7 +160,6 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 7) {
-				Debug.Log("SEVEN");
 				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
@@ -190,7 +184,6 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 8) {
-				Debug.Log("EIGHT");
 				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
@@ -215,7 +208,6 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 9) {
-				Debug.Log("NINE");
 				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
@@ -240,7 +232,6 @@ namespace DungeonExplorer{
 					break;
 				}
 			} else if (num == 10) {
-				Debug.Log("TEN");
 				string ItemSelectionOne = " Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
 					" Sword, 15, 0, 1 \n" +
