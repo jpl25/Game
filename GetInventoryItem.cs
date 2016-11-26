@@ -12,19 +12,19 @@ namespace DungeonExplorer
 		private Spells spell;
 
 		public Weapons selectWeaponItem(int itemSlot){
-			return inventory.getInventory ().getWeapon (itemSlot);
+			return inventory.getInventory ().selectWeapon (itemSlot);
 		}
 
 		public Armor selectArmorItem(int itemSlot){
-			return inventory.getInventory ().getArmor (itemSlot);
+			return inventory.getInventory ().selectArmor (itemSlot);
 		}
 
 		public Item selectItemItem(int itemSlot){
-			return inventory.getInventory ().getItem (itemSlot);
+			return inventory.getInventory ().selectItem (itemSlot);
 		}
 
 		public Spells selectSpellItem(int itemSlot){
-			return inventory.getInventory ().getSpells (itemSlot);
+			return inventory.getInventory ().selectSpells (itemSlot);
 		}
 	}
 }

@@ -6,10 +6,10 @@ using UnityEditor;
 namespace DungeonExplorer{
 	
 	public class Inventory{
-		Dictionary<int, Weapons> newWeapon = new Dictionary<int, Weapons> ();
-		Dictionary<int, Armor> newArmor = new Dictionary<int, Armor> ();
-		Dictionary<int, Item> newItem = new Dictionary<int, Item> ();
-		Dictionary<int, Spells> newSpell = new Dictionary<int, Spells> ();
+		Dictionary<int, Weapons> weapon = new Dictionary<int, Weapons> ();
+		Dictionary<int, Armor> armor = new Dictionary<int, Armor> ();
+		Dictionary<int, Item> item = new Dictionary<int, Item> ();
+		Dictionary<int, Spells> spell = new Dictionary<int, Spells> ();
 		static int armorCnt = 1, wepCnt = 1, itemCnt = 1, spellCnt =1;
 
 		public Inventory(){
@@ -20,78 +20,69 @@ namespace DungeonExplorer{
 			this.setArmor (armor);
 		}
 
-		public void setArmor(Armor armor){
-			newArmor.Add(armorCnt , armor);
+		public void setArmor(Armor newArmor){
+			armor.Add(armorCnt , newArmor);
 			armorCnt++;
 		}
 
-		public void setWeapon(Weapons weapon){
-			newWeapon.Add(wepCnt, weapon);
+		public void setWeapon(Weapons newWeapon){
+			weapon.Add(wepCnt, newWeapon);
 			wepCnt++;
 		}
 
-		public void setItem(Item item){
-			newItem.Add(itemCnt, item);
+		public void setItem(Item newItem){
+			item.Add(itemCnt, newItem);
 			itemCnt++;
 		}
 
-		public void setSpell(Spells spell){
-			newSpell.Add(spellCnt, spell);
+		public void setSpell(Spells newSpell){
+			spell.Add(spellCnt, newSpell);
 			spellCnt++;
 		}
 
-		public Armor getArmor(int armor){
-			if (!newArmor.ContainsKey (armor)) {
+		public Dictionary <int,Weapons> getWeapon(){
+			return weapon;
+		}
+
+		public Dictionary <int,Armor> getArmor(){
+			return armor;
+		}
+
+		public Dictionary <int,Item> getItems(){
+			return item;
+		}
+
+		public Dictionary <int,Spells> getSpells(){
+			return spell;
+		}
+
+		public Armor selectArmor(int armorSelection){
+			if (!armor.ContainsKey (armorSelection)) {
 				Debug.Log ("You do not have armor in that slot.");
-			} else {return newArmor [armor];}
+			} else {return armor [armorSelection];}
 			return null;
 		}
 
-		public Weapons getWeapon(int weapon){
-			if (!newWeapon.ContainsKey (weapon)) {
+		public Weapons selectWeapon(int weaponSelection){
+			if (!weapon.ContainsKey (weaponSelection)) {
 				Debug.Log ("You do not have a weapon in that slot.");
-			} else {return newWeapon [weapon];}
+			} else {return weapon [weaponSelection];}
 			return null;
 		}
 
-		public Item getItem(int item){
-			if (!newItem.ContainsKey (item)) {
+		public Item selectItem(int itemSelection){
+			if (!item.ContainsKey (itemSelection)) {
 				Debug.Log ("You do not have an item in that slot.");
-			} else {return newItem [item];}
+			} else {return item [itemSelection];}
 			return null;
 		}
 
-		public Spells getSpells(int spell){
-			if (!newSpell.ContainsKey (spell)) {
+		public Spells selectSpells(int spellSelection){
+			if (!spell.ContainsKey (spellSelection)) {
 				Debug.Log ("You do not have a spell in that slot.");
-			} else {return newSpell [spell];}
+			} else {return spell [spellSelection];}
 			return null;
 		}
-
-		public void displayInventory(){
-			foreach (KeyValuePair<int, Weapons> kv in newWeapon) {
-				Debug.Log("WEAPONS");
-				Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString () + " " +kv.Value.getDamage()); 
-			}
-
-			foreach (KeyValuePair<int, Armor> kv in newArmor) {
-				Debug.Log("ARMOR");
-				Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString () + " " + kv.Value.getDamage()); 
-			}
-
-			if (newItem != null) {
-				Debug.Log("ITEMS");
-				foreach (KeyValuePair<int, Item> kv in newItem) {
-					Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString () ); 
-				}
-			}
-			if (newSpell != null) {
-				Debug.Log("SPELLS");
-				foreach (KeyValuePair<int, Spells> kv in newSpell) {
-					Debug.Log(kv.Key.ToString() + " " + kv.Value.ToString ()  ); 
-				}
-			}
-		}
-
+			
 	}
 }
